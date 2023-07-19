@@ -1,0 +1,93 @@
+ScrollViewMain:
+
+
+
+
+
+
+<ScrollViewMain>
+    do_scroll_x: False
+    do_scroll_y: True
+    GridLayout:
+        size_hint_y: None
+        height: '1000dp'
+        cols: 1
+        NameTask:
+
+
+
+
+
+<NameTask>:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint: 1, .7
+            Label:
+                text: root.lvl_text
+                text_size: self.size
+                font_size: '100dp'
+                halign: 'center'
+                valign: 'center'
+
+            BoxLayout:
+                orientation: 'vertical'
+                Label:
+                    text: 'Roman Pashedko'
+                    text_size: self.size
+                    font_size: '50dp'
+                    halign: 'left'
+                    valign: 'bottom'
+                Label:
+                    text: 'The genius'
+                    text_size: self.size
+                    font_size: '50dp'
+                    halign: 'left'
+                    valign: 'center'
+        ProgressBar:
+            size_hint: 1, .3
+            min: 0
+            max: root.my_max
+            value: root.my_value
+    BoxLayout:
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Study'
+                font_size: '50dp'
+            Label:
+                text: 'Read'
+                font_size: '50dp'
+            Label:
+                text: 'Stretch'
+                font_size: '50dp'
+        BoxLayout:
+            orientation: 'vertical'
+            AnchorLayout:
+                Button:
+                    id: Button1
+                    size_hint: None, None
+                    size: '50dp', '50dp'
+                    on_press: root.on_button_click1()
+                    disabled: root.count_enabled1
+            AnchorLayout:
+                Button:
+                    id: Button2
+                    size_hint: None, None
+                    size: '50dp', '50dp'
+                    on_press: root.on_button_click2()
+                    disabled: root.count_enabled2
+            AnchorLayout:
+                Button:
+                    id: Button3
+                    size_hint: None, None
+                    size: '50dp', '50dp'
+                    on_press: root.on_button_click3()
+                    disabled: root.count_enabled3
+
+
+
+
+
+
